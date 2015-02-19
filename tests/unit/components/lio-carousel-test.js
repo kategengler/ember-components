@@ -64,7 +64,7 @@ test("only one content item can be active", function() {
   });
 
   throws(function() {
-    context.append();
+    context.render();
   }, /The 'lio-carousel' component can only have one active 'lio-content' component./);
 });
 
@@ -157,7 +157,7 @@ test("the number of labels must be the same as the number of content items", fun
   });
 
   throws(function() {
-    context.append();
+    context.render();
   }, /The 'lio-carousel' component must have the same number of 'lio-label' components as 'lio-content' components./);
 });
 

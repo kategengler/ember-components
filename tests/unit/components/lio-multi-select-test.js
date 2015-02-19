@@ -381,7 +381,7 @@ test("the filter component must contain a text field", function() {
   });
 
   throws(function() {
-    context.append();
+    context.render();
   }, /The 'lio-filter' component must contain a single 'lio-text-field' component./);
 });
 
@@ -433,8 +433,8 @@ test("an option's value is looked up using the option's 'valuePath' attribute", 
       { value: 3 }
     ]),
     layout: compileTemplate(function() {/*
-      {{#each options}}
-        {{lio-option valuePath="value"}}
+      {{#each option in options}}
+        {{lio-option option=option valuePath="value"}}
       {{/each}}
     */}),
   });
@@ -454,8 +454,8 @@ test("an option's value is looked up using the 'optionValuePath' attribute", fun
       { value: 3 }
     ]),
     layout: compileTemplate(function() {/*
-      {{#each options}}
-        {{lio-option}}
+      {{#each option in options}}
+        {{lio-option option=option}}
       {{/each}}
     */}),
   });

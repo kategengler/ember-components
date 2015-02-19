@@ -105,7 +105,7 @@ test("the component throws if there isn't a popover", function() {
   });
 
   throws(function() {
-    context.append();
+    context.render();
   }, /The 'lio-tip' component must have a single 'lio-label' and a single 'lio-popover'/);
 });
 
@@ -121,7 +121,7 @@ test("the component throws if there is more than one popover", function() {
   });
 
   throws(function() {
-    context.append();
+    context.render();
   }, /The 'lio-tip' component must have a single 'lio-label' and a single 'lio-popover'/);
 });
 
@@ -135,7 +135,7 @@ test("the component throws if there isn't a label", function() {
   });
 
   throws(function() {
-    context.append();
+    context.render();
   }, /The 'lio-tip' component must have a single 'lio-label' and a single 'lio-popover'/);
 });
 
@@ -149,7 +149,7 @@ test("the component throws if there is more than one label", function() {
   });
 
   throws(function() {
-    context.append();
+    context.render();
   }, /The 'lio-tip' component must have a single 'lio-label' and a single 'lio-popover'/);
 });
 

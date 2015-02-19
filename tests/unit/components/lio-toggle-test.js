@@ -163,7 +163,7 @@ test("there must be exactly two option components", function() {
   });
 
   throws(function() {
-    context.append();
+    context.render();
   }, /The 'lio-toggle' component must contain at exactly two 'lio-option' components./);
 });
 
