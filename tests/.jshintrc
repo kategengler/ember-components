@@ -1,5 +1,6 @@
 {
   "predef": [
+    "global",
     "document",
     "window",
     "location",

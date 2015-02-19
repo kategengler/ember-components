@@ -1,7 +1,5 @@
 import Ember from 'ember';
 
-var global = this;
-
 function mockPath(obj, path, mock, target, callback) {
   if (!callback) {
     callback = target;
@@ -51,7 +49,7 @@ function mockPath(obj, path, mock, target, callback) {
 }
 
 function mockGlobalPath(path, mock, target, callback) {
-  mockPath(global, path, mock, target, callback);
+  mockPath(window || global, path, mock, target, callback);
 }
 
 export {

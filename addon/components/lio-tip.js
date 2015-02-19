@@ -68,6 +68,15 @@ export default Component.extend(ParentComponentMixin, ActiveStateMixin, {
   shouldBubble: computed.bool('bubbles'),
 
   //
+  // Internal Actions
+  //
+
+  actions: {
+    // Prevent errors when labels are clicked
+    labelFocus: Ember.K
+  },
+
+  //
   // Event Handlers
   //
 

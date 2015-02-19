@@ -20,5 +20,6 @@ var app = new EmberAddon();
 
 app.import('vendor/jquery.simulate.js');
 app.import('vendor/phantom-shims.js');
+app.import('bower_components/ember/ember-template-compiler.js');
 
 module.exports = app.toTree();

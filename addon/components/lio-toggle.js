@@ -84,7 +84,11 @@ export default Component.extend(ParentComponentMixin, {
 
         this.sendAction('action', get(this, 'value'));
       }
-    }
+    },
+
+    // Prevent errors when options are clicked, but let the toggle action
+    // handle actual state change
+    select: Ember.K
   },
 
   //

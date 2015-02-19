@@ -24,7 +24,7 @@ export default Mixin.create({
     var parent = get(this, 'parent');
 
     if (!get(this, 'canBeTopLevel')) {
-      assert("The '" + get(this, 'tagName') + "' component must be nested underneath another component'", parent && parent.registerComponent);
+      assert("The '" + get(this, 'tagName') + "' component must be nested underneath another component'", parent && typeof parent.registerComponent === 'function');
     }
 
     parent && parent.registerComponent && parent.registerComponent(this);

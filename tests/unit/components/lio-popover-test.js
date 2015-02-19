@@ -118,7 +118,7 @@ test("corner positions result in two position class names (matching the edges)",
   component.set('anchor', '#anchor');
 
   Ember.run(function() {
-    component.send('acivate');
+    component.send('activate');
     component.set('position', 'top-left');
     giveBounds(component);
     component.adjustPosition();
