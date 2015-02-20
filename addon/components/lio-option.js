@@ -110,14 +110,4 @@ export default Component.extend(ChildComponentMixin, ActiveStateMixin, Transitio
     // Don't set the select state directly; let the parent manage the state
     parent.send('select', value, isUnselect ? false : !isSelected);
   }
-}).reopenClass({
-  create: function(props) {
-    // If the 'value' attribute is not provided, default to using the
-    // template's context for convenience
-    if (!('option' in props)) {
-      props.option = props._context;
-    }
-
-    return this._super(props);
-  }
 });
